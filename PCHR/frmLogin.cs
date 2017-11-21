@@ -21,5 +21,28 @@ namespace PCHR
         {
 
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            //Application.Run(new frmRegistration());
+            frmRegistration registration = new frmRegistration();
+            registration.Show();
+
+        }
     }
 }

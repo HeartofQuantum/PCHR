@@ -31,5 +31,11 @@ namespace PCHR
         {
 
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            //closes the registration form
+            this.Close();
+        }
     }
 }
