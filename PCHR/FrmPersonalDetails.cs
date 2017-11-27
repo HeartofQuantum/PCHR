@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PCHR
 {
-    public partial class frmHealthRecord : Form
+    public partial class FrmPersonalDetails : Form
     {
-        public frmHealthRecord()
+        public FrmPersonalDetails()
         {
             InitializeComponent();
         }
@@ -49,8 +49,9 @@ namespace PCHR
 
         private void mnuMedicalDetails_Click(object sender, EventArgs e)
         {
-            //frmMedicalDetails medDetails = new frmMedicalDetails();
-            //medDetails.Show();
+            Form newForm = new FrmMedicalDetails();
+            newForm.MdiParent = this;
+            newForm.Show();
         }
 
         private void mnuPersonalDetails_Click(object sender, EventArgs e)
@@ -79,6 +80,26 @@ namespace PCHR
         }
 
         private void lblKinAddress_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLoginCancel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkProviderSave_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void FrmPersonalDetails_Load(object sender, EventArgs e)
         {
 
         }

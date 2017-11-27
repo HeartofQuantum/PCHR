@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace PCHR
 {
-    public partial class fmLogin : Form
+    public partial class FrmLogin : Form
     {
-        public fmLogin()
+        public FrmLogin()
         {
             InitializeComponent();
         }
 
         private void fmLogin_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -34,14 +34,19 @@ namespace PCHR
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+         //   string password = txtPassword.Text;
+         //   string username = txtPassword.Text;
 
+            FrmMain HealthRecord = new FrmMain();            
+            //HealthRecord.MdiParent = this;
+            HealthRecord.Show();
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
             //Application.Run(new frmRegistration());
-            frmRegistration registration = new frmRegistration();
-            registration.Show();
+            FrmRegister register = new FrmRegister();
+            register.Show();
 
         }
     }

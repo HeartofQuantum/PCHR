@@ -1,6 +1,6 @@
 ﻿namespace PCHR
 {
-    partial class frmMedicalDetails
+    partial class FrmMedicalDetails
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // FrmMedicalDetails
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "frmMedicalDetails";
+            this.ClientSize = new System.Drawing.Size(821, 465);
+            this.Name = "FrmMedicalDetails";
+            this.Text = "Medical Details";
+            this.Load += new System.EventHandler(this.FrmMedicalDetails_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

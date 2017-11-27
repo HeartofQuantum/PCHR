@@ -1,6 +1,6 @@
 ﻿namespace PCHR
 {
-    partial class frmRegistration
+    partial class FrmRegister
     {
         /// <summary>
         /// Required designer variable.
@@ -39,7 +39,7 @@
             this.rdoFemale = new System.Windows.Forms.RadioButton();
             this.cboTitle = new System.Windows.Forms.ComboBox();
             this.rdoMale = new System.Windows.Forms.RadioButton();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateOfBirth = new System.Windows.Forms.DateTimePicker();
             this.txtInitials = new System.Windows.Forms.TextBox();
             this.txtFName = new System.Windows.Forms.TextBox();
             this.txtLName = new System.Windows.Forms.TextBox();
@@ -51,9 +51,8 @@
             this.lblLName = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblIdNumber = new System.Windows.Forms.Label();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.txtMessage = new System.Windows.Forms.TextBox();
+            this.BtnAccept = new System.Windows.Forms.Button();
+            this.BtnCancel = new System.Windows.Forms.Button();
             this.grpLogin.SuspendLayout();
             this.grpPersonal.SuspendLayout();
             this.SuspendLayout();
@@ -66,13 +65,12 @@
             this.grpLogin.Controls.Add(this.lblConfirmPassword);
             this.grpLogin.Controls.Add(this.lblPassword);
             this.grpLogin.Controls.Add(this.lblUsername);
-            this.grpLogin.Location = new System.Drawing.Point(31, 43);
+            this.grpLogin.Location = new System.Drawing.Point(5, 12);
             this.grpLogin.Name = "grpLogin";
-            this.grpLogin.Size = new System.Drawing.Size(567, 132);
-            this.grpLogin.TabIndex = 0;
+            this.grpLogin.Size = new System.Drawing.Size(533, 132);
+            this.grpLogin.TabIndex = 1;
             this.grpLogin.TabStop = false;
             this.grpLogin.Text = "Login Details";
-            this.grpLogin.Enter += new System.EventHandler(this.grpLogin_Enter);
             // 
             // txtConfrimPassword
             // 
@@ -121,14 +119,13 @@
             this.lblUsername.Size = new System.Drawing.Size(55, 13);
             this.lblUsername.TabIndex = 0;
             this.lblUsername.Text = "Username";
-            this.lblUsername.Click += new System.EventHandler(this.label1_Click);
             // 
             // grpPersonal
             // 
             this.grpPersonal.Controls.Add(this.rdoFemale);
             this.grpPersonal.Controls.Add(this.cboTitle);
             this.grpPersonal.Controls.Add(this.rdoMale);
-            this.grpPersonal.Controls.Add(this.dateTimePicker1);
+            this.grpPersonal.Controls.Add(this.dateOfBirth);
             this.grpPersonal.Controls.Add(this.txtInitials);
             this.grpPersonal.Controls.Add(this.txtFName);
             this.grpPersonal.Controls.Add(this.txtLName);
@@ -140,13 +137,12 @@
             this.grpPersonal.Controls.Add(this.lblLName);
             this.grpPersonal.Controls.Add(this.lblTitle);
             this.grpPersonal.Controls.Add(this.lblIdNumber);
-            this.grpPersonal.Location = new System.Drawing.Point(31, 191);
+            this.grpPersonal.Location = new System.Drawing.Point(5, 150);
             this.grpPersonal.Name = "grpPersonal";
-            this.grpPersonal.Size = new System.Drawing.Size(567, 276);
-            this.grpPersonal.TabIndex = 1;
+            this.grpPersonal.Size = new System.Drawing.Size(533, 246);
+            this.grpPersonal.TabIndex = 2;
             this.grpPersonal.TabStop = false;
             this.grpPersonal.Text = "Personal Details";
-            this.grpPersonal.Enter += new System.EventHandler(this.grpPersonal_Enter);
             // 
             // rdoFemale
             // 
@@ -182,14 +178,17 @@
             this.rdoMale.Text = "Male";
             this.rdoMale.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // dateOfBirth
             // 
-            this.dateTimePicker1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(197, 173);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(131, 20);
-            this.dateTimePicker1.TabIndex = 15;
+            this.dateOfBirth.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.dateOfBirth.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateOfBirth.Location = new System.Drawing.Point(197, 173);
+            this.dateOfBirth.MaxDate = new System.DateTime(2017, 11, 22, 3, 51, 23, 0);
+            this.dateOfBirth.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.dateOfBirth.Name = "dateOfBirth";
+            this.dateOfBirth.Size = new System.Drawing.Size(131, 20);
+            this.dateOfBirth.TabIndex = 15;
+            this.dateOfBirth.Value = new System.DateTime(2017, 11, 22, 0, 0, 0, 0);
             // 
             // txtInitials
             // 
@@ -282,63 +281,62 @@
             this.lblIdNumber.TabIndex = 4;
             this.lblIdNumber.Text = "Identity Number";
             // 
-            // btnCancel
+            // BtnAccept
             // 
-            this.btnCancel.Location = new System.Drawing.Point(449, 487);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 2;
-            this.btnCancel.Text = "&Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.BtnAccept.Location = new System.Drawing.Point(301, 419);
+            this.BtnAccept.Name = "BtnAccept";
+            this.BtnAccept.Size = new System.Drawing.Size(75, 23);
+            this.BtnAccept.TabIndex = 3;
+            this.BtnAccept.Text = "&Accept";
+            this.BtnAccept.UseVisualStyleBackColor = true;
+            this.BtnAccept.Click += new System.EventHandler(this.BtnAccept_Click);
             // 
-            // button1
+            // BtnCancel
             // 
-            this.button1.Location = new System.Drawing.Point(574, 487);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "&Register";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BtnCancel.Location = new System.Drawing.Point(380, 419);
+            this.BtnCancel.Name = "BtnCancel";
+            this.BtnCancel.Size = new System.Drawing.Size(75, 23);
+            this.BtnCancel.TabIndex = 4;
+            this.BtnCancel.Text = "&Cancel";
+            this.BtnCancel.UseVisualStyleBackColor = true;
             // 
-            // txtMessage
-            // 
-            this.txtMessage.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMessage.Location = new System.Drawing.Point(31, 12);
-            this.txtMessage.Name = "txtMessage";
-            this.txtMessage.ReadOnly = true;
-            this.txtMessage.Size = new System.Drawing.Size(618, 13);
-            this.txtMessage.TabIndex = 4;
-            this.txtMessage.Text = "Please enter all the following details to register.";
-            // 
-            // frmRegistration
+            // FrmRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(685, 539);
-            this.Controls.Add(this.txtMessage);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnCancel);
+            this.ClientSize = new System.Drawing.Size(546, 469);
+            this.Controls.Add(this.BtnCancel);
+            this.Controls.Add(this.BtnAccept);
             this.Controls.Add(this.grpPersonal);
             this.Controls.Add(this.grpLogin);
-            this.Name = "frmRegistration";
-            this.Text = "Registration";
+            this.Name = "FrmRegister";
+            this.Text = "FrmRegister";
             this.grpLogin.ResumeLayout(false);
             this.grpLogin.PerformLayout();
             this.grpPersonal.ResumeLayout(false);
             this.grpPersonal.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.GroupBox grpLogin;
-        private System.Windows.Forms.Label lblUsername;
-        private System.Windows.Forms.GroupBox grpPersonal;
+        private System.Windows.Forms.TextBox txtConfrimPassword;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label lblConfirmPassword;
         private System.Windows.Forms.Label lblPassword;
+        private System.Windows.Forms.Label lblUsername;
+        private System.Windows.Forms.GroupBox grpPersonal;
+        private System.Windows.Forms.RadioButton rdoFemale;
+        private System.Windows.Forms.ComboBox cboTitle;
+        private System.Windows.Forms.RadioButton rdoMale;
+        private System.Windows.Forms.DateTimePicker dateOfBirth;
+        private System.Windows.Forms.TextBox txtInitials;
+        private System.Windows.Forms.TextBox txtFName;
+        private System.Windows.Forms.TextBox txtLName;
+        private System.Windows.Forms.TextBox txtIdNumber;
         private System.Windows.Forms.Label lblInitials;
         private System.Windows.Forms.Label lblGender;
         private System.Windows.Forms.Label lblDOB;
@@ -346,19 +344,7 @@
         private System.Windows.Forms.Label lblLName;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblIdNumber;
-        private System.Windows.Forms.TextBox txtConfrimPassword;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.TextBox txtInitials;
-        private System.Windows.Forms.TextBox txtFName;
-        private System.Windows.Forms.TextBox txtLName;
-        private System.Windows.Forms.TextBox txtIdNumber;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.RadioButton rdoFemale;
-        private System.Windows.Forms.ComboBox cboTitle;
-        private System.Windows.Forms.RadioButton rdoMale;
-        private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox txtMessage;
+        private System.Windows.Forms.Button BtnAccept;
+        private System.Windows.Forms.Button BtnCancel;
     }
 }

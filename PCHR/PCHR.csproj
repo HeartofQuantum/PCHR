@@ -60,30 +60,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmHealthRecord.cs">
+    <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmHealthRecord.Designer.cs">
-      <DependentUpon>frmHealthRecord.cs</DependentUpon>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMedicalDetails.cs">
+    <Compile Include="FrmPersonalDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMedicalDetails.Designer.cs">
-      <DependentUpon>frmMedicalDetails.cs</DependentUpon>
+    <Compile Include="FrmPersonalDetails.Designer.cs">
+      <DependentUpon>FrmPersonalDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRegistration.cs">
+    <Compile Include="FrmMedicalDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRegistration.Designer.cs">
-      <DependentUpon>frmRegistration.cs</DependentUpon>
+    <Compile Include="FrmMedicalDetails.Designer.cs">
+      <DependentUpon>FrmMedicalDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLogin.cs">
+    <Compile Include="FrmRegister.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.Designer.cs">
-      <DependentUpon>frmLogin.cs</DependentUpon>
+    <Compile Include="FrmRegister.Designer.cs">
+      <DependentUpon>FrmRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patient.cs" />
+    <Compile Include="PatientDB.cs" />
     <Compile Include="pchr42563DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -91,14 +99,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmHealthRecord.resx">
-      <DependentUpon>frmHealthRecord.cs</DependentUpon>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLogin.resx">
-      <DependentUpon>frmLogin.cs</DependentUpon>
+    <EmbeddedResource Include="FrmPersonalDetails.resx">
+      <DependentUpon>FrmPersonalDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRegistration.resx">
-      <DependentUpon>frmRegistration.cs</DependentUpon>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMedicalDetails.resx">
+      <DependentUpon>FrmMedicalDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegister.resx">
+      <DependentUpon>FrmRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

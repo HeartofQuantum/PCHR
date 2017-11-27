@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace PCHR
 {
-    public partial class FrmMedicalDetails : Form
+    public partial class FrmRegister : Form
     {
-        public FrmMedicalDetails()
+        public FrmRegister()
         {
             InitializeComponent();
         }
 
-        private void FrmMedicalDetails_Load(object sender, EventArgs e)
+        private void BtnAccept_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

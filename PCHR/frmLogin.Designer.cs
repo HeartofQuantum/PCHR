@@ -1,6 +1,6 @@
 ﻿namespace PCHR
 {
-    partial class fmLogin
+    partial class FrmLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -100,7 +100,7 @@
             this.lblPassword.TabIndex = 6;
             this.lblPassword.Text = "Password:";
             // 
-            // fmLogin
+            // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -112,7 +112,8 @@
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.btnRegister);
-            this.Name = "fmLogin";
+            this.Name = "FrmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.fmLogin_Load);
             this.ResumeLayout(false);
