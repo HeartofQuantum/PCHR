@@ -16,6 +16,7 @@ namespace PCHR
         {
             List<Patient> patients = new List<Patient>();
 
+            //create text file
             StreamReader InText = new StreamReader(new FileStream(PATH, FileMode.Open, FileAccess.Read));
 
             while (InText.Peek() != -1)
@@ -24,7 +25,8 @@ namespace PCHR
                 string[] columns = row.Split('|');
                 Patient patient = new Patient();
                 patient.PatientID = Convert.ToInt32(columns[0]);
-                patient.FName = columns[1];
+
+                /*patient.FName = columns[1];
                 patient.LName = columns[2];
                 patient.LName = columns[3];
                 patient.DOB   = Convert.ToString(columns[4]);
@@ -34,7 +36,7 @@ namespace PCHR
                 patient.Zip = columns[8];
                 patient.Home = columns[9];
                 patient.Mobile = columns[10];
-                patient.PrimaryID = Convert.ToInt32(columns[11]);
+                patient.PrimaryID = Convert.ToInt32(columns[11]);*/
 
             }
 
