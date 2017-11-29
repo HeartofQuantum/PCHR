@@ -17,13 +17,6 @@ namespace PCHR
             InitializeComponent();
         }
 
-        /*private void mnuItemPersonalDetails_Click(object sender, EventArgs e)
-        {
-            FrmPersonalDetails PersonalDetails = new FrmPersonalDetails();
-            PersonalDetails.MdiParent = this; 
-            PersonalDetails.Show();
-        }*/
-
         private void rToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -41,17 +34,27 @@ namespace PCHR
 
         private void mnuMedicalDetails_Click(object sender, EventArgs e)
         {
-            //
+            //creates new Medical Details form
             Form MedicalDetails = new FrmMedicalDetails();
             MedicalDetails.MdiParent = this;
             MedicalDetails.Show();
         }
-
+            //creates new Person Details form
         private void mnuPersonalDetails_Click(object sender, EventArgs e)
         {
             Form PersonalDetails = new FrmPersonalDetails();
             PersonalDetails.MdiParent = this;
             PersonalDetails.Show();
+        }
+
+        private void mnuCPHR_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Sorry, that sign of the application is currently under construction!");
+        }
+
+        private void mnuEPHR_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Sorry, that sign of the application is currently under construction!");
         }
     }
 }

@@ -71,12 +71,14 @@
             this.mnuCPHR.Name = "mnuCPHR";
             this.mnuCPHR.Size = new System.Drawing.Size(228, 20);
             this.mnuCPHR.Text = "Comprehensive Personal Health Record";
+            this.mnuCPHR.Click += new System.EventHandler(this.mnuCPHR_Click);
             // 
             // mnuEPHR
             // 
             this.mnuEPHR.Name = "mnuEPHR";
             this.mnuEPHR.Size = new System.Drawing.Size(204, 20);
             this.mnuEPHR.Text = "Emergency Personal Health Record";
+            this.mnuEPHR.Click += new System.EventHandler(this.mnuEPHR_Click);
             // 
             // mnuLogout
             // 
