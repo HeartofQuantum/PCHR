@@ -50,7 +50,9 @@
             this.lblOnset = new System.Windows.Forms.Label();
             this.lblNote = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pchr42563DataSet1 = new PCHR.pchr42563DataSet();
+            
+            //I have no idea what is going on here.
+            //this.pchr42563DataSet1 = new PCHRDB.pchr42563DataSet();
             this.lblAllergies = new System.Windows.Forms.Label();
             this.txtAllergies = new System.Windows.Forms.TextBox();
             this.txtNote = new System.Windows.Forms.TextBox();
@@ -131,7 +133,7 @@
             this.grpAllergies.SuspendLayout();
             this.grpPrescriptions.SuspendLayout();
             this.grpHIV.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pchr42563DataSet1)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.pchr42563DataSet1)).BeginInit();
             this.grpImmunizationDetails.SuspendLayout();
             this.grpTestResultDetails.SuspendLayout();
             this.grpMedicalConditionDetails.SuspendLayout();
@@ -390,8 +392,8 @@
             // 
             // pchr42563DataSet1
             // 
-            this.pchr42563DataSet1.DataSetName = "pchr42563DataSet";
-            this.pchr42563DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            //this.pchr42563DataSet1.DataSetName = "pchr42563DataSet";
+            //this.pchr42563DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lblAllergies
             // 
@@ -1139,7 +1141,7 @@
             this.grpPrescriptions.PerformLayout();
             this.grpHIV.ResumeLayout(false);
             this.grpHIV.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pchr42563DataSet1)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.pchr42563DataSet1)).EndInit();
             this.grpImmunizationDetails.ResumeLayout(false);
             this.grpImmunizationDetails.PerformLayout();
             this.grpTestResultDetails.ResumeLayout(false);
@@ -1177,7 +1179,7 @@
         private System.Windows.Forms.Label lblAllergic;
         private System.Windows.Forms.Label lblAllergies;
         private System.Windows.Forms.TextBox textBox1;
-        private pchr42563DataSet pchr42563DataSet1;
+        //private pchr42563DataSet pchr42563DataSet1;
         private System.Windows.Forms.TextBox txtNote;
         private System.Windows.Forms.TextBox txtAllergies;
         private System.Windows.Forms.DateTimePicker dateAllergyOnset;

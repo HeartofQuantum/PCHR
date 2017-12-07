@@ -326,6 +326,7 @@
             this.linkLoginEdit.TabIndex = 27;
             this.linkLoginEdit.TabStop = true;
             this.linkLoginEdit.Text = "Edit";
+            this.linkLoginEdit.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLoginEdit_LinkClicked);
             // 
             // comboBox1
             // 

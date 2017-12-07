@@ -33,5 +33,16 @@ namespace PCHR.Properties {
                 return ((string)(this["pchr42563ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\PCHR.mdf;Inte" +
+            "grated Security=True;Connect Timeout=30")]
+        public string PCHRConnectionString {
+            get {
+                return ((string)(this["PCHRConnectionString"]));
+            }
+        }
     }
 }

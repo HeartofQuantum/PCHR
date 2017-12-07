@@ -8,70 +8,41 @@ namespace PCHR
 {
     public class Patient
     {
-
-        //private vaibles
-        private int patientID { get; set; }
-        private string username { get; set; }
-        private string password { get; set; }
-
-        /*
-        public string LName { get; set; }
-        public string FName { get; set; }
-        public DateTime DOB { get; set; }
-        public string Street { get; set; }
-        public string City { get; set; }
-        public string State { get; set; }
-        public string Zip { get; set; }
-        public string Home { get; set; }
-        public string Mobile { get; set; }
-        public int PrimaryID { get; set; }
-        */
-
-        //Constructors
         public Patient() { }
 
-        public Patient(int PatientID, string username, string password)
+        public Patient(string PATIENT_ID)
         {
-            this.PatientID = patientID;
-            this.Username = username;
-            this.Password = password;
+            this.PATIENT_ID = PATIENT_ID;
         }
 
-        public int PatientID
-        {
-            get
-            {
-                return patientID;
-            }
-            set
-            {
-                patientID = value;
-            }
-        }
+        public string PATIENT_ID { get; set; }
 
-        public string Username
-        {
-            get
-            {
-                return username;
-            }
-            set
-            {
-                username = value;
-            }
-        }
+        public string FIRST_NAME { get; set; }
 
-        public string Password
-        {
-            get
-            {
-                return password;
-            }
-            set
-            {
-                password = value;
-            }
-        }
+        public string LAST_NAME { get; set; }
 
+        public DateTime DATE_Of_BIRTH { get; set; }
+
+        public string ADDRESS_STREET { get; set; }
+
+        public string ADDRESS_CITY { get; set; }
+
+        public string ADDRESS_STATE { get; set; }
+
+        public string ADDRESS_ZIP { get; set; }
+
+        public string PHONE_HOME { get; set; }
+
+        public string PHONE_MOBILE { get; set; }
+
+        public string PRIMARY_ID { get; set; }
+
+        public string USERNAME { get; set; }
+
+        public string PWORD { get; set; }
+
+        public string TITLE { get; set; }
+
+        public string GENDER { get; set; }
     }
 }

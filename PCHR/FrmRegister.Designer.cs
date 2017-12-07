@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.grpLogin = new System.Windows.Forms.GroupBox();
-            this.txtConfrimPassword = new System.Windows.Forms.TextBox();
+            this.txtConfirmPassword = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.lblConfirmPassword = new System.Windows.Forms.Label();
@@ -59,7 +59,7 @@
             // 
             // grpLogin
             // 
-            this.grpLogin.Controls.Add(this.txtConfrimPassword);
+            this.grpLogin.Controls.Add(this.txtConfirmPassword);
             this.grpLogin.Controls.Add(this.txtPassword);
             this.grpLogin.Controls.Add(this.txtUsername);
             this.grpLogin.Controls.Add(this.lblConfirmPassword);
@@ -71,13 +71,14 @@
             this.grpLogin.TabIndex = 1;
             this.grpLogin.TabStop = false;
             this.grpLogin.Text = "Login Details";
+            this.grpLogin.Enter += new System.EventHandler(this.grpLogin_Enter);
             // 
-            // txtConfrimPassword
+            // txtConfirmPassword
             // 
-            this.txtConfrimPassword.Location = new System.Drawing.Point(197, 91);
-            this.txtConfrimPassword.Name = "txtConfrimPassword";
-            this.txtConfrimPassword.Size = new System.Drawing.Size(253, 20);
-            this.txtConfrimPassword.TabIndex = 8;
+            this.txtConfirmPassword.Location = new System.Drawing.Point(197, 91);
+            this.txtConfirmPassword.Name = "txtConfirmPassword";
+            this.txtConfirmPassword.Size = new System.Drawing.Size(253, 20);
+            this.txtConfirmPassword.TabIndex = 8;
             // 
             // txtPassword
             // 
@@ -85,6 +86,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(253, 20);
             this.txtPassword.TabIndex = 7;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // txtUsername
             // 
@@ -92,6 +94,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(253, 20);
             this.txtUsername.TabIndex = 6;
+            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
             // lblConfirmPassword
             // 
@@ -143,6 +146,7 @@
             this.grpPersonal.TabIndex = 2;
             this.grpPersonal.TabStop = false;
             this.grpPersonal.Text = "Personal Details";
+            this.grpPersonal.Enter += new System.EventHandler(this.grpPersonal_Enter);
             // 
             // rdoFemale
             // 
@@ -181,7 +185,8 @@
             // dateOfBirth
             // 
             this.dateOfBirth.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.dateOfBirth.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateOfBirth.CustomFormat = "dd.MM.yyyy";
+            this.dateOfBirth.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateOfBirth.Location = new System.Drawing.Point(197, 173);
             this.dateOfBirth.MaxDate = new System.DateTime(2017, 11, 22, 3, 51, 23, 0);
             this.dateOfBirth.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
@@ -299,6 +304,7 @@
             this.BtnCancel.TabIndex = 4;
             this.BtnCancel.Text = "&Cancel";
             this.BtnCancel.UseVisualStyleBackColor = true;
+            this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // FrmRegister
             // 
@@ -311,6 +317,7 @@
             this.Controls.Add(this.grpLogin);
             this.Name = "FrmRegister";
             this.Text = "FrmRegister";
+            this.Load += new System.EventHandler(this.FrmRegister_Load);
             this.grpLogin.ResumeLayout(false);
             this.grpLogin.PerformLayout();
             this.grpPersonal.ResumeLayout(false);
@@ -322,7 +329,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox grpLogin;
-        private System.Windows.Forms.TextBox txtConfrimPassword;
+        private System.Windows.Forms.TextBox txtConfirmPassword;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label lblConfirmPassword;

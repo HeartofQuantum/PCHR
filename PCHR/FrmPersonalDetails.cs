@@ -49,6 +49,7 @@ namespace PCHR
 
         private void mnuMedicalDetails_Click(object sender, EventArgs e)
         {
+            
             Form newForm = new FrmMedicalDetails();
             newForm.MdiParent = this;
             newForm.Show();
@@ -100,6 +101,11 @@ namespace PCHR
         }
 
         private void FrmPersonalDetails_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLoginEdit_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
         }

@@ -29,7 +29,9 @@ namespace PCHR
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
-
+            Form login = new FrmLogin();
+            login.MdiParent = this;
+            login.Show();
         }
 
         private void mnuMedicalDetails_Click(object sender, EventArgs e)

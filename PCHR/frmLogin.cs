@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace PCHR
 {
@@ -16,6 +17,7 @@ namespace PCHR
         {
             InitializeComponent();
         }
+
 
         private void fmLogin_Load(object sender, EventArgs e)
         {
@@ -34,20 +36,48 @@ namespace PCHR
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-         //   string password = txtPassword.Text;
-         //   string username = txtPassword.Text;
 
-            FrmMain HealthRecord = new FrmMain();            
-            //HealthRecord.MdiParent = this;
-            HealthRecord.Show();
+            if (IsValidData())
+            {
+                try
+                {
+                    //validates whether or not the user and password match the database entries
+                    Patient you = PatientDB.Login(txtUsername.Text, txtPassword.Text);
+                    if (you.USERNAME == txtUsername.Text && you.PWORD == txtPassword.Text)
+                    {
+                        Form main = new FrmMain();
+                        main.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sorry, something went wrong with your login. ");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, ex.GetType().ToString());
+                    MessageBox.Show("Your password or username does not match a user within the database. Please register.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("You must filled out the user and password fields. ");
+            }
+
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            //Application.Run(new frmRegistration());
             FrmRegister register = new FrmRegister();
             register.Show();
-
         }
+
+        private bool IsValidData()
+        {
+            return
+                Validator.IsPresent(txtUsername) &&
+                Validator.IsPresent(txtPassword);
+        }
+
     }
 }
