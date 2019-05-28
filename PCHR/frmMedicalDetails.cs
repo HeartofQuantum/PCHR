@@ -10,11 +10,26 @@ using System.Windows.Forms;
 
 namespace PCHR
 {
-    public partial class frmMedicalDetails : Form
+    public partial class FrmMedicalDetails : Form
     {
-        public frmMedicalDetails()
+        public FrmMedicalDetails()
         {
             InitializeComponent();
+        }
+
+        private void FrmMedicalDetails_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkPersonalMDSave_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            
         }
     }
 }
